@@ -1,0 +1,30 @@
+extends layout
+
+mixin message(opp, name, data)
+        <br>
+        hi.greeting 안녕하세요 
+            span=name
+        <br>
+        <tr>
+        <br>
+        <br>
+        <br>
+        <br>
+        hi.greeting 현재 주차장 차량수는
+            span=data 
+            hi 대 입니다.
+            <br>
+        <br>
+        <br>
+            
+append links
+    li(style="float: right")
+        a(href="/logout") 로그아웃
+    li(style="float: left")
+
+block content
+    .dashboard
+        .user
+            +message(opp, name, data)
+        
+
